@@ -1,0 +1,20 @@
+<div *ngIf="card" class="Container">
+  <span class="PatientName">{{card.patientName}} - {{card.createdDate.toLocaleDateString()}}</span>
+  <div class="ArrhythmiasContainer">
+    <p *ngFor="let arrhythmia of card.arrhythmias">
+      - {{arrhythmia}}
+    </p>
+  </div>
+  <div class="ActionContainer">
+    <div class="ActionMlAuto">
+      <i *ngIf="card.status !== 'DONE'" class="Status">{{card.status}}</i>
+      <div *ngIf="card.status === 'DONE'; else elseBlock">
+        <button (click)="onStatusChange.emit({id: card.id, status: 'REJECTED'})" class="Button RejectButton">REJECT</button>
+      </div>
+      <ng-template #elseBlock>
+        <button (click)="onStatusChange.emit({id: card.id, status: 'DONE'})"  class="Button DoneButton">DONE</button>
+      </ng-template>
+    </div>
+  </div>
+</div>
+

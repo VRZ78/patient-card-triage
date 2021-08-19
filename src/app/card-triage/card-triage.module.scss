@@ -1,0 +1,22 @@
+.Container {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 20px);
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+
+.CardColumn {
+  width: 30%;
+}
+
+.CardColumnTitle {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.CardColumnContent {
+  max-height: 90%;
+  overflow-y: scroll;
+  overflow-x: visible;
+}

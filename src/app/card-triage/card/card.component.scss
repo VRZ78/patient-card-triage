@@ -1,0 +1,74 @@
+@import "../../../styles.scss";
+
+.Container {
+  padding: 5px;
+  border-radius: 4px;
+  margin: 20px 10%;
+  box-shadow: 8px 5px 20px 3px #e0e0e0;
+  background-color: $card-background-color;
+  font-size: .80em;
+  animation: card-in .20s ease-out;
+}
+
+@keyframes card-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ArrhythmiasContainer {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+
+.ActionContainer {
+  display: flex;
+}
+
+.ActionMlAuto {
+  margin-left: auto;
+  display: flex;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.Status {
+  font-size: .75rem;
+  margin-right: 5px;
+  color: $secondary-text-color;
+}
+
+.PatientName {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.DoneButton {
+  background-color: $confirm-color;
+}
+
+.RejectButton {
+  background-color: $cancel-color;
+}
+
+.Button {
+  color: $button-color;
+  height: 26px;
+  cursor: pointer;
+  font-size: .75rem;
+  border: none;
+}
+
+

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+$header-background-color: #72abd6;
+$header-color: #ffffff;
+$app-background-color: #f8f7f7;
+$card-background-color: #ffffff;
+$primary-text-color: black;
+$secondary-text-color: #b3afaf;
+$button-color: #ffffff;
+$confirm-color: darkgreen;
+$cancel-color: darkred;
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $app-background-color;
+}

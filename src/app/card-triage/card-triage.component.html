@@ -1,0 +1,25 @@
+<div class="Container">
+  <div class="CardColumn">
+    <div class="CardColumnTitle">
+      <span>TO-DO</span>
+      <hr/>
+    </div>
+    <div class="CardColumnContent">
+      <div *ngFor="let card of pendingOrRejectedCards">
+        <card *ngIf="hasToDisplay(card)" (onStatusChange)="this.onStatusChanged($event)" [card]="card"></card>
+      </div>
+    </div>
+  </div>
+  <div class="CardColumn">
+    <div class="CardColumnTitle">
+      <span>DONE</span>
+      <hr/>
+    </div>
+    <div class="CardColumnContent">
+      <div *ngFor="let card of doneCards">
+        <card *ngIf="hasToDisplay(card)" (onStatusChange)="this.onStatusChanged($event)" [card]="card"></card>
+      </div>
+    </div>
+
+  </div>
+</div>
